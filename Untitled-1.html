@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,32 +10,34 @@
 <body>
     <header>
         <h1>REALITY</h1>
+        <div class="menu-icon" onclick="toggleNav()">&#9776;</div> <!-- Icône de menu -->
         <div class="mon_nav_bar">
-            <a href="#"><div>Accueil</div></a>
-            <a href="#"><div>Nos services</div></a>
-            <a href="#"><div>Documentation</div></a>
-            <a href="#"><div>Contact</div></a>
+            <a href="#">Accueil</a>
+            <a href="#">Nos services</a>
+            <a href="#">Documentation</a>
+            <a href="#">Contact</a>
         </div>
     </header>
+
     <nav id="all-slider">
         <div id="slider">
             <div class="slide">
-                <img src="slide1.jpg" alt="Slide 1">
+                <img src="image/slide1.jpg" alt="Slide 1">
                 <div class="quote">"La seule façon de faire un excellent travail est d'aimer ce que vous faites."</div>
                 <div class="slogan">Innovation à chaque étape</div>
             </div>
             <div class="slide">
-                <img src="slide2.webp" alt="Slide 2">
+                <img src="image/slide2.webp" alt="Slide 2">
                 <div class="quote">"Ne regardez pas l'horloge ; faites ce qu'elle fait. Continuez."</div>
                 <div class="slogan">Votre succès, notre mission</div>
             </div>
             <div class="slide">
-                <img src="slide3.webp" alt="Slide 3">
+                <img src="image/slide3.webp" alt="Slide 3">
                 <div class="quote">"Le succès est la somme de petits efforts répétés jour après jour."</div>
                 <div class="slogan">Excellence en action</div>
             </div>
             <div class="slide">
-                <img src="slide4.webp" alt="Slide 4">
+                <img src="image/slide4.webp" alt="Slide 4">
                 <div class="quote">"L'avenir appartient à ceux qui croient à la beauté de leurs rêves."</div>
                 <div class="slogan">Construisons l'avenir ensemble</div>
             </div>
@@ -84,6 +86,7 @@
         <p>© 2024 REALITY. Tous droits réservés.</p>
         <a href="#">Mentions légales</a>
         <a href="#">Politique de confidentialité</a>
+        <p>par Bienfait AKSANTI BARAKA #Flash</p>
     </footer>
 
     <script>
@@ -105,6 +108,11 @@
         }
 
         setInterval(nextSlide, 5000); // Changer de diapositive toutes les 5 secondes
+
+        function toggleNav() {
+            const navBar = document.querySelector('.mon_nav_bar');
+            navBar.classList.toggle('nav-open'); // Basculer la classe nav-open
+        }
     </script>
 </body>
 </html>
