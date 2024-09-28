@@ -178,7 +178,7 @@ footer a {
         @media (max-width: 512px){
         .quote, .slogan {
             position: absolute;
-            top: 20%;
+            top: 13%;
             left: 50%;
             width: 80%;
             transform: translateX(-50%);
@@ -190,11 +190,15 @@ footer a {
             color: #fff;
         }
         .slogan {
-            top: 80%;
+            top: 73%;
             font-size: 1.2rem;
         }
         .progress-bar{
-            bottom: 230px;
+            bottom: 210px;
         }
+        .info-section
+            {
+                margin-top: 2px;
+            }
     }
 }
