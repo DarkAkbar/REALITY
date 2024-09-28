@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REALITY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="mon_css.css">
+</head>
+<body>
+    <header>
+        <h1>REALITY</h1>
+        <div class="mon_nav_bar">
+            <a href="#"><div>Accueil</div></a>
+            <a href="#"><div>Nos services</div></a>
+            <a href="#"><div>Documentation</div></a>
+            <a href="#"><div>Contact</div></a>
+        </div>
+    </header>
+    <nav id="all-slider">
+        <div id="slider">
+            <div class="slide">
+                <img src="image/slide1.jpg" alt="Slide 1">
+                <div class="quote">"La seule façon de faire un excellent travail est d'aimer ce que vous faites."</div>
+                <div class="slogan">Innovation à chaque étape</div>
+            </div>
+            <div class="slide">
+                <img src="image/slide2.webp" alt="Slide 2">
+                <div class="quote">"Ne regardez pas l'horloge ; faites ce qu'elle fait. Continuez."</div>
+                <div class="slogan">Votre succès, notre mission</div>
+            </div>
+            <div class="slide">
+                <img src="image/slide3.webp" alt="Slide 3">
+                <div class="quote">"Le succès est la somme de petits efforts répétés jour après jour."</div>
+                <div class="slogan">Excellence en action</div>
+            </div>
+            <div class="slide">
+                <img src="image/slide4.webp" alt="Slide 4">
+                <div class="quote">"L'avenir appartient à ceux qui croient à la beauté de leurs rêves."</div>
+                <div class="slogan">Construisons l'avenir ensemble</div>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </nav>
+
+    <section class="info-section">
+        <div class="card">
+            <i class="fas fa-info-circle fa-2x"></i>
+            <h3>À propos</h3>
+            <p>Découvrez notre mission et nos valeurs.</p>
+            <button class="cta-button">En savoir plus</button>
+        </div>
+        <div class="card">
+            <i class="fas fa-cog fa-2x"></i>
+            <h3>Nos Services</h3>
+            <p>Explorez les services que nous offrons.</p>
+            <button class="cta-button">Voir les services</button>
+        </div>
+        <div class="card">
+            <i class="fas fa-comments fa-2x"></i>
+            <h3>Contactez-nous</h3>
+            <p>Nous sommes là pour vous aider.</p>
+            <button class="cta-button">Contact</button>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Témoignages</h2>
+        <div class="testimonial">"Un service exceptionnel ! Je recommande vivement."</div>
+        <div class="testimonial">"Une équipe très professionnelle et à l'écoute."</div>
+        <div class="testimonial">"J'ai été très satisfait de mon expérience."</div>
+    </section>
+
+    <section class="news">
+        <h2>Actualités</h2>
+        <div class="news-item">Nouvelle fonctionnalité lancée !</div>
+        <div class="news-item">Rejoignez-nous pour notre prochain webinaire.</div>
+        <div class="news-item">Participez à notre concours pour gagner des prix !</div>
+    </section>
+
+    <footer>
+        <p>© 2024 REALITY. Tous droits réservés.</p>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progress = document.getElementById('progress');
+
+        function showSlide(index) {
+            const slider = document.getElementById('slider');
+            const offset = -index * 100; // Calculer le décalage
+            slider.style.transform = `translateX(${offset}%)`;
+            progress.style.width = `${((index + 1) / totalSlides) * 100}%`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 5000); // Changer de diapositive toutes les 5 secondes
+    </script>
+</body>
+</html>
