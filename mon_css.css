@@ -176,7 +176,7 @@ footer a {
         bottom: 130px;
     }
         @media (max-width: 512px){
-        header{
+        #all-slider {
             height: auto; 
         }
         .quote, .slogan {
