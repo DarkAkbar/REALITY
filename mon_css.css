@@ -175,4 +175,26 @@ footer a {
     .progress-bar{
         bottom: 130px;
     }
+        @media (max-width: 512px){
+        .quote, .slogan {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 80%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            color: #fff;
+        }
+        .slogan {
+            top: 80%;
+            font-size: 1.2rem;
+        }
+        .progress-bar{
+            bottom: 230px;
+        }
+    }
 }
