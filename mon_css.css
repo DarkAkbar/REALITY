@@ -176,6 +176,9 @@ footer a {
         bottom: 130px;
     }
         @media (max-width: 512px){
+        header{
+            height: auto; 
+        }
         .quote, .slogan {
             position: absolute;
             top: 13%;
@@ -198,7 +201,7 @@ footer a {
         }
         .info-section
             {
-                margin-top: 2px;
+                margin-top: 10px;
             }
     }
 }
