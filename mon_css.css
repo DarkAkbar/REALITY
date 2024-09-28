@@ -21,8 +21,9 @@ h1 {
 }
 .mon_nav_bar {
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de s'adapter sur plusieurs lignes si nécessaire */
 }
-.mon_nav_bar a{
+.mon_nav_bar a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -140,6 +141,8 @@ footer a {
     margin: 0 10px;
     text-decoration: none;
 }
+
+/* Media Queries pour Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -149,10 +152,29 @@ footer a {
         font-size: 2rem;
     }
     .mon_nav_bar {
+        flex-direction: column; /* Affiche les éléments de la barre de navigation en colonne */
         margin-top: 10px;
+        width: 100%; /* Assure que la barre de navigation prend toute la largeur */
+    }
+    .mon_nav_bar div {
+        margin: 5px 0; /* Espacement vertical entre les éléments */
+        margin-left: 0; /* Supprime le margin gauche */
+        padding: 10px; /* Ajuste le padding pour le mobile */
+        width: 100%; /* Chaque élément prend toute la largeur */
+        text-align: center; /* Centre le texte */
+    }
+    #all-slider {
+        height: 300px; /* Ajuste la hauteur du slider pour les mobiles */
+    }
+    .quote, .slogan {
+        font-size: 1.2rem; /* Réduit la taille de la police pour les mobiles */
+        padding: 5px 10px; /* Réduit le padding */
     }
     .info-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Affiche les cartes en colonne */
+        align-items: center; /* Centre les cartes */
+    }
+    .card {
+        width: 90%; /* Ajuste la largeur des cartes pour les mobiles */
     }
 }
