@@ -177,7 +177,7 @@ footer a {
     }
         @media (max-width: 512px){
         #all-slider {
-            height: 290px; 
+            height: 275px; 
         }
         .quote, .slogan {
             position: absolute;
@@ -197,7 +197,7 @@ footer a {
             font-size: 1.2rem;
         }
         .progress-bar{
-            bottom: 210px;
+            bottom: 17px;
         }
         .info-section
             {
